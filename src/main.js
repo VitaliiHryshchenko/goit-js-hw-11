@@ -6,7 +6,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { renderPictures } from './js/render-functions';
 import { fetchPictures, generateHttpsQuery } from './js/pixabay-api';
-
 const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionPosition: 'bottom',
@@ -48,5 +47,6 @@ function fetchError(error) {
     title: 'Error',
     message:
       'Sorry, there are no images matching your search query. Please try again!',
+    position: 'center',
   });
 }
