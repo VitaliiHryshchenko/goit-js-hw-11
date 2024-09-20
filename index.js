@@ -6,7 +6,7 @@ import{S as u,i as h}from"./assets/vendor-5ObWk2rO.js";(function(){const t=docum
             src="${t}" 
             alt="${s}" 
             width="360"
-            height="152" 
+            height="200" 
           />
         </a>
         <div class="discribe-box">
@@ -30,5 +30,5 @@ import{S as u,i as h}from"./assets/vendor-5ObWk2rO.js";(function(){const t=docum
           </ul>
         </div>
       </li>
-    `).join("")}const l={key:"46019224-0ece95bdc3a0496b8437567d7",q:"",imageType:"photo",orientation:"horizontal",safesearch:!0};function m(i){return l.q=i,`https://pixabay.com/api/?${new URLSearchParams(l).toString()}`}function p(i){return fetch(i).then(t=>{if(!t.ok)throw new Error(t.status);return t.json()})}const y=new u(".gallery a",{captionDelay:250,captionPosition:"bottom",captionsData:"alt"}),o={searchForm:document.querySelector(".js-search-form"),gallery:document.querySelector(".js-gallery"),loader:document.querySelector(".js-loader")};o.searchForm.addEventListener("submit",g);function g(i){i.preventDefault();const t=i.currentTarget.elements.searchtext.value.toLowerCase().trim();o.gallery.innerHTML="",o.loader.classList.add("loader"),p(m(t)).then(c=>{o.loader.classList.remove("loader");const s=c.hits;s.length===0&&n(),o.gallery.insertAdjacentHTML("beforeend",f(s)),y.refresh()}).catch(n).finally(o.searchForm.reset())}function n(i){h.error({title:"Error",message:"Sorry, there are no images matching your search query. Please try again!",position:"center"})}
+    `).join("")}const l={key:"46019224-0ece95bdc3a0496b8437567d7",q:"",imageType:"photo",orientation:"horizontal",safesearch:!0};function m(i){return l.q=i,`https://pixabay.com/api/?${new URLSearchParams(l).toString()}`}function p(i){return fetch(i).then(t=>{if(!t.ok)throw new Error(t.status);return t.json()})}const g=new u(".gallery a",{captionDelay:250,captionPosition:"bottom",captionsData:"alt"}),o={searchForm:document.querySelector(".js-search-form"),gallery:document.querySelector(".js-gallery"),loader:document.querySelector(".js-loader")};o.searchForm.addEventListener("submit",y);function y(i){i.preventDefault();const t=i.currentTarget.elements.searchtext.value.toLowerCase().trim();o.gallery.innerHTML="",o.loader.classList.add("loader"),p(m(t)).then(c=>{o.loader.classList.remove("loader");const s=c.hits;s.length===0&&n(),o.gallery.insertAdjacentHTML("beforeend",f(s)),g.refresh()}).catch(n).finally(o.searchForm.reset())}function n(i){h.error({title:"Error",message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight"})}
 //# sourceMappingURL=index.js.map
