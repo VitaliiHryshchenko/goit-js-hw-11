@@ -17,7 +17,7 @@ export function renderPictures(hits) {
             src="${webformatURL}" 
             alt="${tags}" 
             width="360"
-            height="152" 
+            height="200" 
           />
         </a>
         <div class="discribe-box">

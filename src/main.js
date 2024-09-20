@@ -47,6 +47,6 @@ function fetchError(error) {
     title: 'Error',
     message:
       'Sorry, there are no images matching your search query. Please try again!',
-    position: 'center',
+    position: 'topRight',
   });
 }
